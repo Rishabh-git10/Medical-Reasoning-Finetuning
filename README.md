@@ -1,13 +1,13 @@
-# Fine-tuning BERT for Medical Reasoning
+# Fine-tuning GPT-2 for Medical Reasoning
 
-This repository contains the implementation of a fine-tuned BERT-based model on the [Hugging Face Medical-O1 Reasoning Dataset](https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT). The model is designed to perform structured medical reasoning and generate contextually relevant responses to medical queries. 
+This repository contains the implementation of a fine-tuned GPT-based model on the [Hugging Face Medical-O1 Reasoning Dataset](https://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT). The model is designed to perform structured medical reasoning and generate contextually relevant responses to medical queries. 
 
 ## Overview
 
 Medical reasoning is a critical task in clinical decision-making, and this project aims to simulate this process using a fine-tuned transformer-based language model. The model handles structured inputs comprising questions, reasoning steps, and responses, enabling it to provide accurate and insightful answers.
 
 Key features:
-- Fine-tuning a `bert-base-cased` model for medical reasoning tasks.
+- Fine-tuning a `gpt2` model for medical reasoning tasks.
 - Preprocessing and formatting data for causal language modeling.
 - Training pipeline using Hugging Face Transformers and PyTorch.
 - Evaluation and inference for real-world medical queries.
@@ -37,7 +37,7 @@ pip install torch transformers datasets numpy
 
 1. **Dataset Loading**: The dataset is loaded using the Hugging Face `datasets` library and split into training and validation subsets.
 2. **Data Preprocessing**: Input data is tokenized and formatted to include the question, reasoning, and response for causal language modeling.
-3. **Model Fine-tuning**: The `bert-base-cased` model is fine-tuned using a training loop with customized hyperparameters.
+3. **Model Fine-tuning**: The `gpt2` model is fine-tuned using a training loop with customized hyperparameters.
 4. **Evaluation and Inference**: The trained model is tested and used to generate responses to unseen medical queries.
 
 
@@ -123,10 +123,6 @@ The fine-tuned model successfully replicates structured medical reasoning and ge
 - Experiment with larger models like LLaMA-2 for improved performance.
 - Incorporate domain-specific reinforcement learning for better alignment with clinical practices.
 - Extend the dataset to include diverse medical scenarios.
-
-## License
-
-This project is licensed under the MIT License. See `LICENSE` for more details.
 
 ## Acknowledgments
 
